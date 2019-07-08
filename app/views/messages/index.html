@@ -1,0 +1,150 @@
+<div class ="contaner">
+    <div class="contaner__left">
+        <div class = "left-header">
+            <div class = "left-header__user">seo</div>
+            <ul class = "left-header__menu">
+                <li class = "left-header__menu__edit"><i class="fas fa-cog"></i></li>
+                <li class = "left-header__menu__new-group"><i class="fas fa-edit"></i></li>
+            </ul>
+        </div>
+        <div class ="left-body">
+            <div class ="left-body__group">
+                <p class = "left-body__group__name">sample</p>
+                <p class = "left-body__group__message">Good bye world</p>
+            </div>
+            <div class ="left-body__group">
+                <p class = "left-body__group__name">sample</p>
+                <p class = "left-body__group__message">Good bye world</p>
+            </div>
+        </div>
+    </div>
+    <div class="contaner__right">
+        <div class="right-header">
+            <div class = "right-header__group">
+                <p class = "right-header__group__name">sample</p>
+                <p class = "right-header__group__member">Members : seo neko</p>
+            </div>
+            <a>
+                <div class="right-header__edit">Edit</div>
+            </a>
+        </div>
+        <div class="right-body">
+            <div class="right-body__user">
+                <p class="right-body__user__name">seo</p>
+                <p class="right-body__user__date">2019/07/08</p>
+                <p class="right-body__user__comment">Hello world</p>
+            </div>
+            <div class="right-body__user">
+                <p class="right-body__user__name">seo</p>
+                <p class="right-body__user__date">2019/07/08</p>
+                <p class="right-body__user__comment">Hello world</p>
+            </div>
+        </div>
+        <div class="right-footer">
+            <div class="right-footer__form">
+                <form>
+                    <div class="right-footer__form__box">
+                        <input class="right-footer__form__box__text" type="text" placeholder="input message">
+                        <div class="right-footer__form__box__img"><i class="far fa-image fa-lg"></i></div>
+                    </div>
+                    <input class="right-footer__form__send" type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- <div class='wrapper'>
+    <div class='chat-side'>
+        <div class='side-header'>
+            <div class='side-header__box'>
+                <p class='side-header__box__user-name'>aaaa</p>
+                <ul class='side-header__box__menu'>
+    <li class='side-header__box__menu__new-group'>
+    <a href="/groups/new"><i class="fa fa-edit"></i>
+    </a></li>
+    <li class='side-header__box__menu__edit-user'>
+    <a href="/users/1042/edit"><i class="fa fa-cog"></i>
+    </a></li>
+    </ul>
+    </div>
+    </div>
+    <div class='groups'>
+    <a href="/groups/2177/messages"><div class='group'>
+    <p class='group__group-name'>bbb</p>
+    <p class='group__latest-message'>まだメッセージがありません</p>
+    </div>
+    </a><a href="/groups/2175/messages"><div class='group'>
+    <p class='group__group-name'>aaa</p>
+    <p class='group__latest-message'>bbbbb</p>
+    </div>
+    </a><a href="/groups/2200/messages"><div class='group'>
+    <p class='group__group-name'>cccc</p>
+    <p class='group__latest-message'>まだメッセージがありません</p>
+    </div>
+    </a></div>
+    </div>
+    
+    <div class='chat-main'>
+    <div class='main-header'>
+    <div class='main-header__left-box'>
+    <h2 class='main-header__left-box__current-group' data-group_id='2175'>
+    aaa
+    </h2>
+    <ul class='main-header__left-box__member-list'>
+    Member：
+    <li class='main-header__left-box__member-list__member'>aaaa</li>
+    </ul>
+    </div>
+    <a href="/groups/2175/edit"><div class='main-header__edit-btn'>Edit</div>
+    </a></div>
+    <div class='messages'>
+    <div class='message' data-message_id='5814'>
+    <div class='message__upper-info'>
+    <p class='message__upper-info__talker'>aaaa</p>
+    <p class='message__upper-info__date'>2019/07/07(Sun) 12:05:52</p>
+    </div>
+    <p class='message__text'>aaaaa</p>
+    
+    </div>
+    <div class='message' data-message_id='5815'>
+    <div class='message__upper-info'>
+    <p class='message__upper-info__talker'>aaaa</p>
+    <p class='message__upper-info__date'>2019/07/07(Sun) 12:06:00</p>
+    </div>
+    <p class='message__text'>bbbbb</p>
+    
+    </div>
+    <div class='message' data-message_id='5816'>
+    <div class='message__upper-info'>
+    <p class='message__upper-info__talker'>aaaa</p>
+    <p class='message__upper-info__date'>2019/07/07(Sun) 12:06:07</p>
+    </div>
+    <p class='message__text'>ccccc</p>
+    
+    </div>
+    <div class='message' data-message_id='5817'>
+    <div class='message__upper-info'>
+    <p class='message__upper-info__talker'>aaaa</p>
+    <p class='message__upper-info__date'>2019/07/07(Sun) 12:06:30</p>
+    </div>
+    <p class='message__text'></p>
+    <img src="/uploads/message/image/5817/pa.png" alt="Pa" />
+    </div>
+    
+    </div>
+    <div class='form'>
+    <form class="new_message" id="new_message" enctype="multipart/form-data" action="/groups/2175/messages" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="x5fGd+GvqkGWHkLqkk4FFyEdtGexTSSamzqpT5TywjY2MEhYfQGMcn5JGA9I1Bssdt4PCkyJiResmGVfffdyPw==" /><div class='input-box'>
+    <input placeholder="type a message" class="input-box__text" type="text" name="message[content]" id="message_content" />
+    <label class="input-box__image" for="message_image"><i class="fa fa-image"></i>
+    <input class="input-box__image__file" type="file" name="message[image]" id="message_image" />
+    </label></div>
+    <input type="submit" name="commit" value="Send" class="submit-btn" data-disable-with="Send" />
+    </form></div>
+    </div>
+    
+    </div>
+    
+    </body>
+    </html>
+     -->

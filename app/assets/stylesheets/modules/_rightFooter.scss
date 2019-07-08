@@ -1,0 +1,48 @@
+// <div class="right-footer">
+// <div class="right-footer__form">
+//     <form>
+//         <input class="right-footer__form__text" type="text">
+//         <input class="right-footer__form__send" type="submit" value="Send">
+//     </form>
+// </div>
+// </div>
+
+.right-footer{
+  height:90px;
+  width:100%;
+  background-color: #dddddd;
+  box-sizing: border-box;
+  padding:20px 40px;
+  &__form{
+    &__box{
+      width:calc(100% - 115px);
+      padding:0 10px;
+      box-sizing: border-box;
+      float: left;
+      background-color: #ffffff;
+      &__text{
+        width:500px;
+        height:50px;
+        line-height: 50px;
+        font-size: 16px;
+        color: #434a54;
+        float: left;
+        border:none;
+      }
+      &__img{
+        height:50px;
+        line-height:50px;
+        float: right;
+      }
+    }
+    &__send{
+      height:50px;
+      width:100px;
+      background-color: #38aef0;
+      color:#ffffff;
+      margin-left:15px;
+      float: right;
+      box-sizing: border-box;
+    }
+  }
+}
