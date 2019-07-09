@@ -1,0 +1,30 @@
+
+
+.left-header{
+  height:100px;
+  width:100%;
+  background-color: #253141;
+  box-sizing: border-box;
+  padding:0 20px;
+  &__user{
+    height:100px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 100px;
+    color: #FFFFFF;
+    float:left;
+  }
+  &__menu{
+    height:100px;
+    line-height: 100px;
+    &__edit{
+      float: right;
+      color:#ffffff;
+      padding-left:5px;
+    }
+    &__new-group{
+      float: right;
+      color:#ffffff;
+    }
+  }
+}

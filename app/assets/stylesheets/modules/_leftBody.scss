@@ -1,0 +1,22 @@
+
+
+.left-body{
+  height:calc(100% - 100px);
+  width:100%;
+  background-color: #2f3e51;
+  box-sizing: border-box;
+  padding:0 20px;
+  &__group{
+    height:85px;
+    width:100%;
+    color:#ffffff;
+    &__name{
+      font-size: 15px;
+      padding:20px 0 5px;
+    }
+    &__message{
+      font-size: 11px;
+      padding-top:0;
+    }
+  }
+}

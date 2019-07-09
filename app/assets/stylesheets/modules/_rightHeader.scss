@@ -1,0 +1,32 @@
+
+
+.right-header{
+  height:100px;
+  width:100%;
+  box-sizing: border-box;
+  padding:0 40px;
+  border-bottom:solid 1px #eeeeee;
+  &__group{
+    float: left;
+    &__name{
+      font-size:20px;
+      padding-top:35px;
+      color:#333333;
+    }
+    &__member{
+      font-size:12px;
+      padding-top:15px;
+      color:#999999;
+    }
+  }
+  &__edit{
+    float: right;
+    margin-top:30px;
+    padding:0 20px;
+    border:solid 1px #38aef0;
+    box-sizing: border-box;
+    height:40px;
+    color:#38aef0;
+    line-height: 40px;
+  }
+}
