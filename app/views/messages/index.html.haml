@@ -1,25 +1,14 @@
 .contaner
-  .contaner__left
-    .left-header
-      .left-header__user seo
-      %ul.left-header__menu
-        %li.left-header__menu__edit
-          %i.fa.fa-cog
-        %li.left-header__menu__new-group
-          %i.fa.fa-edit
-    .left-body
-      .left-body__group
-        %p.left-body__group__name sample
-        %p.left-body__group__message Good bye world
-      .left-body__group
-        %p.left-body__group__name sample
-        %p.left-body__group__message Good bye world
+  = render "./shared/left_contaner"
   .contaner__right
     .right-header
       .right-header__group
-        %p.right-header__group__name sample
-        %p.right-header__group__member Members : seo neko
-      %a
+        %p.right-header__group__name 
+          = Group.find(params[:group_id]).name
+        %p.right-header__group__member 
+          menber
+         
+      = link_to edit_group_path(params[:group_id]) do
         .right-header__edit Edit
     .right-body
       .right-body__user
