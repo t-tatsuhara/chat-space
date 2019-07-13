@@ -1,4 +1,5 @@
 @import "./reset";
+@import "./config/colors";
 @import "font-awesome";
 @import "./modules/contaner";
 @import "./modules/leftHeader";
@@ -6,3 +7,6 @@
 @import "./modules/rightHeader";
 @import "./modules/rightBody";
 @import "./modules/rightFooter";
+@import "./modules/user";
+@import "./modules/flash";
+@import "./modules/group";
