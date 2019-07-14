@@ -4,26 +4,24 @@
     .right-header
       .right-header__group
         %p.right-header__group__name 
-          = Group.find(params[:group_id]).name
+          = @group.name
         %p.right-header__group__member 
-          menber
+          - @group.users.each do |user|
+            = user.name
          
       = link_to edit_group_path(params[:group_id]) do
         .right-header__edit Edit
     .right-body
-      .right-body__user
-        %p.right-body__user__name seo
-        %p.right-body__user__date 2019/07/08
-        %p.right-body__user__comment Hello world
-      .right-body__user
-        %p.right-body__user__name seo
-        %p.right-body__user__date 2019/07/08
-        %p.right-body__user__comment Hello world
+      = render @messages
+
+
     .right-footer
       .right-footer__form
-        %form
+        = form_for([@group,@message]) do |f|
           .right-footer__form__box
-            %input.right-footer__form__box__text{placeholder: "input message", type: "text"}/
+            = f.text_field :content, class: 'right-footer__form__box__text', placeholder: "input message"
             .right-footer__form__box__img
-              %i.fa.fa-image.fa-lg
-          %input.right-footer__form__send{type: "submit", value: "Send"}/
+              = f.label :image do
+                = fa_icon 'picture-o', class: 'image'
+                = f.file_field :image, class: 'hidden'
+          = f.submit "Send", class: 'right-footer__form__send'
