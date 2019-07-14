@@ -16,4 +16,7 @@
           .left-body__group__name
             = group.name
           .left-body__group__message
-            メッセージはまだありません
+            - if group.messages.last
+              = group.messages.find(group.messages.last).content
+            - else
+              まだメッセージはありません
