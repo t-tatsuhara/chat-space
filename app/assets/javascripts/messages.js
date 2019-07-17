@@ -39,8 +39,7 @@ $(function(){
     .done(function(message){      
       var html = buildHTML(message);
       $(".right-body").append(html);
-      $(".right-footer__form__box__text").val("");
-      $(".hidden").val("");
+      $("#new_message")[0].reset();
       scrollBottom();
     })
     .fail(function(){
@@ -53,4 +52,3 @@ $(function(){
     )
   });
 });
-
