@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:update, :edit]
+  before_action :set_user, only: [:new, :edit]
 
   def index
   end
@@ -7,7 +8,6 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @group.users << current_user
-    @users = User.find(@group.users.ids)
   end
 
   def create
@@ -20,7 +20,6 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @users = User.find(@group.users.ids)
     if @group.update(group_params)
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
@@ -29,7 +28,6 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @users = User.find(@group.users.ids)
   end
 
 
@@ -41,6 +39,10 @@ class GroupsController < ApplicationController
   
   def set_group
     @group = Group.find(params[:id])
+  end
+
+  def set_user
+    @user = User.find(@group.users.ids)
   end
   
 end
