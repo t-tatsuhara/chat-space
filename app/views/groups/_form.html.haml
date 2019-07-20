@@ -29,7 +29,7 @@
         .chat-group-user.clearfix.js-chat-member
           %input{name: "group[user_ids][]", value: "#{current_user.id}", type: "hidden"}/
           %p.chat-group-user__name #{current_user.name}
-      - @users.each do |user|
+      - @user.each do |user|
         .chat-group-user.clearfix.js-chat-member{id: "chat-group-user-${user.id}"}>
           %input{name: "group[user_ids][]", type: "hidden", value: user.id}/
           %p.chat-group-user__name #{user.name}
