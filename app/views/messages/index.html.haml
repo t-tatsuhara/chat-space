@@ -1,9 +1,9 @@
 .contaner
   = render "./shared/left_contaner"
-  .contaner__right
+  .contaner__right(data-group-id="#{@group.id}")
     .right-header
       .right-header__group
-        %p.right-header__group__name 
+        %p.right-header__group__name
           = @group.name
         %p.right-header__group__member 
           - @group.users.each do |user|
