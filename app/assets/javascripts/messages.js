@@ -33,24 +33,46 @@ $(function(){
                         message.created_at +
                       '</div>'
   
-    if (message.content && message.image.url) {
-      var html = html_temp +
-          '<p class="right-body__user__comment">' +
-            message.content +
-          '</p>' +
-          '<img src="' + message.image.url + '" class="lower-message__image" >' +
-        '</div>' 
-    } else if (message.content) {
-      var html = html_temp +
-          '<p class="right-body__user__comment">' +
-            message.content +
-          '</p>' +
-        '</div>' 
-    } else if (message.image.url) {
-      var html = html_temp +
-          '<img src="' + message.image.url + '" class="lower-message__image" >' +
-        '</div>' 
-    };
+  //   if (message.content && message.image.url) {
+  //     var html = html_temp +
+  //         '<p class="right-body__user__comment">' +
+  //           message.content +
+  //         '</p>' +
+  //         '<img src="' + message.image.url + '" class="lower-message__image" >' +
+  //       '</div>' 
+  //   } else if (message.content) {
+  //     var html = html_temp +
+  //         '<p class="right-body__user__comment">' +
+  //           message.content +
+  //         '</p>' +
+  //       '</div>' 
+  //   } else if (message.image.url) {
+  //     var html = html_temp +
+  //         '<img src="' + message.image.url + '" class="lower-message__image" >' +
+  //       '</div>' 
+  //   };
+  //   return html;
+  // };
+
+    var html = 
+    (message.content && message.image.url) ?
+      html_temp +
+      '<p class="right-body__user__comment">' +
+        message.content +
+      '</p>' +
+      '<img src="' + message.image.url + '" class="lower-message__image" >' +
+      '</div>' 
+    : (message.content) ?
+      html_temp +
+      '<p class="right-body__user__comment">' +
+        message.content +
+      '</p>' +
+      '</div>' 
+    : 
+      html_temp +
+      '<img src="' + message.image.url + '" class="lower-message__image" >' +
+      '</div>' 
+    ;
     return html;
   };
 
@@ -103,7 +125,6 @@ $(function(){
       scrollBottom();
     })
     .fail(function() {
-      console.log('error');
     });
   };
 
