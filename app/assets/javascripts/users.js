@@ -8,6 +8,13 @@ $(function(){
     return html
   }
 
+  function appendalart(){
+    var html = `<div class="chat-group-user clearfix" >
+                  <p class="chat-group-user__name">一致するユーザーがいません</p>
+                </div>`
+    return html
+  }
+
   function appendUserdel(user_name,user_id){
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${user_id}'>
                   <input name='group[user_ids][]' type='hidden' value='${user_id}'>
@@ -28,18 +35,17 @@ $(function(){
     })
     .done(function(users){
       $("#user-search-result").empty();
-      users.forEach(function(user){
-        if (user.user_name !== 0) {
+      if (users.length !== 0 ){
+        users.forEach(function(user){
           $('#user-search-result').append(appendUser(user));
           if (input.length === 0){
             $('#user-search-result').empty();
-          } 
-        }
-        else {
-          $('#user-search-result').empty();
-        }
-      });
-
+          }
+        })
+      }
+      else{
+        $('#user-search-result').append(appendalart());
+      }
     })
     .fail(function(){
       alert('ユーザー検索に失敗しました');
