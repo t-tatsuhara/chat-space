@@ -96,12 +96,14 @@ $(function(){
       dataType: 'json'
     })
     .done(function(messages) {
-      var insertHTML = '';
-      messages.forEach(function(message){
-        insertHTML = buildMessageHTML(message);
-      });
-      $(".right-body").append(insertHTML);
-      scrollBottom();
+      if (messages != ''){
+        var insertHTML = '';
+        messages.forEach(function(message){
+          insertHTML = buildMessageHTML(message);
+        });
+        $(".right-body").append(insertHTML);
+        scrollBottom();
+      }
     })
     .fail(function() {
     });
